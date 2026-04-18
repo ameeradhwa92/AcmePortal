@@ -30,4 +30,23 @@ public class ProductRequest
 
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
+
+    /// <summary>
+    /// Task 5 - Solutioning (Based on problem statement)
+    /// </summary>
+    public int CustomerId { get; set; }
+
+    public DateTime DateOfPurchased { get; set; }
+
+    [Required, MaxLength(200)]
+    public string CustomerName { get; set; } = string.Empty;
+
+    [Range(0, double.MaxValue)]
+    public decimal TotalPrice { get; set; }
+
+    [Required, MaxLength(200)]
+    public string ProductName { get; set; } = string.Empty;
+
+    [Required, MaxLength(10)]
+    public string TransactionRefNo { get; set; } = string.Empty;
 }
