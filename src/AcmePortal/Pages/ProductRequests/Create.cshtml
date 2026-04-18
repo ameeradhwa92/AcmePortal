@@ -23,6 +23,13 @@
                 <span asp-validation-for="NewRequest.ProductId" class="text-danger"></span>
             </div>
             <div class="mb-3">
+                <label asp-for="NewRequest.CustomerId" class="form-label">Customer</label>
+                <select asp-for="NewRequest.CustomerId" asp-items="Model.CustomerSelectList" class="form-select">
+                    <option value="">-- Select Customer --</option>
+                </select>
+                <span asp-validation-for="NewRequest.CustomerId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
                 <label asp-for="NewRequest.RequestType" class="form-label">Request Type</label>
                 <select asp-for="NewRequest.RequestType" asp-items="Html.GetEnumSelectList<RequestType>()" class="form-select"></select>
             </div>

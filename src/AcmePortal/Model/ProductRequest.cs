@@ -38,15 +38,15 @@ public class ProductRequest
 
     public DateTime DateOfPurchased { get; set; }
 
-    [Required, MaxLength(200)]
+    [MaxLength(200)]
     public string CustomerName { get; set; } = string.Empty;
 
     [Range(0, double.MaxValue)]
     public decimal TotalPrice { get; set; }
 
-    [Required, MaxLength(200)]
+    [MaxLength(200)]
     public string ProductName { get; set; } = string.Empty;
 
-    [Required, MaxLength(10)]
+    [MaxLength(50)]
     public string TransactionRefNo { get; set; } = string.Empty;
 }
