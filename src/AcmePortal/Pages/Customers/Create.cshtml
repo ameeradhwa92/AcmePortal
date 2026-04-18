@@ -1,0 +1,33 @@
+﻿@page
+@model AcmePortal.Pages.Customers.CreateModel
+@{
+    ViewData["Title"] = "Add Customer";
+}
+
+<h4>Add Customer</h4>
+
+<div class="card" style="max-width:500px;">
+    <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="NewCustomer.Name" class="form-label">Name</label>
+                <input asp-for="NewCustomer.Name" class="form-control" />
+                <span asp-validation-for="NewCustomer.Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="NewCustomer.Email" class="form-label">Email</label>
+                <input asp-for="NewCustomer.Email" class="form-control" type="email" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NewCustomer.Phone" class="form-label">Phone</label>
+                <input asp-for="NewCustomer.Phone" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-success">Save</button>
+            <a asp-page="./Index" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
